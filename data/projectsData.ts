@@ -6,7 +6,7 @@ export const projects = [
     title: "BlackWave Studio",
     slug: "blackwave-studio",
     category: ["Backend Development", "AI", "API Design"],
-    img: getAssetPath("images/project1_1.jpeg"),
+    img: getAssetPath("images/project1_1.png"),
 
     // Sticky
     owner: "Vladyslav Horobtsov",
@@ -18,13 +18,13 @@ export const projects = [
 
     // Scroll
     overview:
-      "BlackWave is a cutting-edge AI image generation platform I developed that offers powerful image creation capabilities through both a user-friendly interface and a robust API. The platform allows users to generate images from text prompts, transform existing images, upscale images, and even create videos from text descriptions.",
+      "BlackWave is a cutting-edge AI image generation platform I developed that provides advanced image creation capabilities through both a user-friendly web interface and a robust API. The platform enables users to generate images from text prompts using multiple AI models (including Stable Diffusion variants, SDXL, Flux, Kolors, and more), apply LoRA models for style customization, upscale images with various algorithms, and share creations through an integrated gallery system.",
     objective:
-      "The primary objective was to build a scalable and reliable backend system that could handle high-volume requests, integrate seamlessly with various AI models, and provide a secure and performant API for both the web interface and external integrations. The platform needed to support various generation modes, complex parameter configurations, and reliable security measures to protect user data.",
+      "The primary objective was to build a scalable and reliable backend system that could handle high-volume image generation requests, integrate seamlessly with multiple AI models, implement a secure token-based economy, and provide a performant API for both the web interface and external integrations. The platform needed to support streaming responses, complex parameter configurations, and comprehensive security measures while maintaining high availability.",
     process:
-      "I implemented a comprehensive backend architecture using Node.js and Express, with MongoDB for data storage and Redis for caching. The system integrates with multiple AI models through a unified API layer, allowing for easy switching between models and fallback options. I designed the API with performance and scalability in mind, implementing efficient queuing systems, rate limiting, and load balancing to ensure reliable operation even during high traffic periods. The authentication system uses JWT tokens with refresh mechanisms, and all sensitive data is encrypted both in transit and at rest. For the image generation pipeline, I created a modular system that preprocesses requests, optimizes parameters, and postprocesses results for consistent quality across different models and use cases.",
+      "I implemented a comprehensive backend architecture using Python and FastAPI, with an asynchronous database system for data storage and Redis for caching and rate limiting. The system integrates with multiple AI generation models through a unified service layer, enabling seamless switching between models like SD 1.5/2.0/3.0, SDXL, Flux, Kolors, and many others. I designed the API with performance in mind, implementing efficient request handling with streaming responses, rate limiting middleware, and comprehensive error handling. The authentication system uses JWT tokens with configurable expiration, and the platform includes a Gumroad payment integration for handling token purchases. For image storage, I integrated MinIO (S3-compatible storage) with imgproxy for secure image serving. The system also features a sophisticated NSFW content filter, background task processing, and notification systems for monitoring errors and important events.",
     impact:
-      "BlackWave Studio has successfully processed more than 1.5 million image generations since launch, with consistently high user satisfaction ratings. The API has been integrated by several third-party applications, providing a stable revenue stream. The platform's reliability has been exceptional, with 99.9% uptime and response times averaging under 500ms for API calls (excluding processing time). This project has become a significant showcase of my ability to build complex, robust backend systems that handle computationally intensive tasks at scale.",
+      "BlackWave Studio has successfully processed over 1.5 million image generations while maintaining exceptional reliability with 99.9% uptime. The platform's token-based economy has created a sustainable business model, with multiple token package options providing flexible pricing for users. The API's streaming capabilities have been particularly well-received, allowing for real-time progress updates during the generation process. The gallery system has fostered a creative community around the platform, while the robust backend architecture has easily scaled to meet growing demand. This project showcases my ability to build complex, high-performance backend systems that integrate multiple AI technologies and handle media processing at scale."
   },
   {
     // For Post

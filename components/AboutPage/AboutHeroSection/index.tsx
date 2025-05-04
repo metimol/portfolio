@@ -68,7 +68,7 @@ export default function AboutHeroSection() {
                 </div>
 
                 <div className={styles.image} ref={imageRef}>
-                    <Image src={getAssetPath('images/about.jpeg')} alt='Vladyslav Horobtsov' width={500} height={500} unoptimized />
+                    <Image src={getAssetPath('images/about.png')} alt='Vladyslav Horobtsov' width={500} height={500} unoptimized />
                 </div>
             </div>
         </section>
