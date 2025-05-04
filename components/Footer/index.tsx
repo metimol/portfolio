@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                 <div className={styles.border} />
                 <div className={styles.copyrights}>
                     <div className={styles.col}>
-                        <p>© All rights reserved / 2024</p>
+                        <p>© All rights reserved / 2025</p>
                     </div>
                     <div className={styles.linksCol}>
                         {socialLinks}

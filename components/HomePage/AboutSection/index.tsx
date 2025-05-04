@@ -72,7 +72,7 @@ export default function AboutSection() {
                     <Tag text="About" />
                 </div>
                 <h2 className={styles.aboutText} ref={aboutTextRef}>
-                    I am a Dutch digital designer and web developer with over 8 years of experience, specializing at the crossroads of design, animation, and web development. My broad expertise allows me to approach design challenges from multiple perspectives.
+                    I am a backend developer with 3 years of experience, specializing in web development and data scraping. My expertise enables me to build efficient and scalable solutions for complex challenges.
                 </h2>
                 <div className={styles.btnSpace} ref={btnWrapperRef}>
                     <Button text="More About Me" href="/about" />
