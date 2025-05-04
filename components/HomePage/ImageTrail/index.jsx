@@ -68,7 +68,7 @@ export default function ImageTrail() {
                 <div 
                     ref={trailRef} 
                     className={styles.trail} 
-                    style={{ backgroundImage: `url(${getAssetPath('images/heroimg2.jpeg')})` }} 
+                    style={{ backgroundImage: `url(${getAssetPath('images/heroimg2.png')})` }} 
                 />
             </div>
         </>
