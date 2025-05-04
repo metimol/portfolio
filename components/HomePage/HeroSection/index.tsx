@@ -35,15 +35,15 @@ export default function HeroSection() {
             <ImageTrailEffect />
             <div className={styles.marquee} ref={marqueeRef}>
                 <div className={styles.content} ref={marqueeTextRef}>
-                    &nbsp;Kael Donovan - Kael Donovan - Kael Donovan - Kael Donovan -
-                    Kael Donovan - Kael Donovan - Kael Donovan - Kael Donovan -
-                    Kael Donovan - Kael Donovan - Kael Donovan - Kael Donovan -
-                    Kael Donovan - Kael Donovan - Kael Donovan - Kael Donovan -
-                    Kael Donovan - Kael Donovan - Kael Donovan - Kael Donovan -
+                    &nbsp; Vladyslav Horobtsov - Vladyslav Horobtsov - Vladyslav Horobtsov - Vladyslav Horobtsov -
+                    Vladyslav Horobtsov - Vladyslav Horobtsov - Vladyslav Horobtsov - Vladyslav Horobtsov -
+                    Vladyslav Horobtsov - Vladyslav Horobtsov - Vladyslav Horobtsov - Vladyslav Horobtsov -
+                    Vladyslav Horobtsov - Vladyslav Horobtsov - Vladyslav Horobtsov - Vladyslav Horobtsov -
+                    Vladyslav Horobtsov - Vladyslav Horobtsov - Vladyslav Horobtsov - Vladyslav Horobtsov -
                 </div>
             </div>
             <h5 className={styles.tagline}>
-                an independent creative Designer & Developer based in Netherlands
+                an independent backend developer based in Ukraine
             </h5>
         </section>
     );

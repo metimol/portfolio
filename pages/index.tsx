@@ -12,7 +12,7 @@ export default function HomePage() {
     return (
         <>
             <Head>
-                <title>Kael | Home</title>
+                <title>Vladyslav | Home</title>
             </Head>
             <HeroSection />
             <AboutSection />

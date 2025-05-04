@@ -51,11 +51,11 @@ export default function App({ Component, pageProps }: AppProps) {
     return (
         <>
             <Head>
-                <title>Kael — Crafting digital products with a focus on UI design and development</title>
-                <meta name="description" content="Focused on crafting memorable digital experiences through ui design and creative development." />
-                <meta name="author" content="Kael" />
+                <title>Vladyslav — Crafting digital solutions with a focus on backend development</title>
+                <meta name="description" content="Focused on building robust backend systems and scalable digital solutions." />
+                <meta name="author" content="Vladyslav" />
                 <meta name="robots" content="index, follow" />
-                <meta name="keywords" content="UI Design, Web Developer, Digital Products, Creative Developer" />
+                <meta name="keywords" content="Backend Development, Web Developer, API Design, Scalable Systems, Software Engineer" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="icon" type="image/x-icon" href={getAssetPath('images/favicon.png')} />
             </Head>

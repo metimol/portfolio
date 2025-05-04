@@ -89,7 +89,7 @@ export default function Nav() {
         <>
             <nav className={styles.nav}>
                 <Link href='/' className={styles.logo}>
-                    <span>Kael Donovan</span>
+                    <span>Vladyslav Horobtsov</span>
                 </Link>
                 <div className={styles.menu_Toggle} onClick={() => setMenuOpen(prev => !prev)}>
                     <div className={styles.bar}></div>

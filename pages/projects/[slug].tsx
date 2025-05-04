@@ -66,7 +66,7 @@ const ProjectPage = ({ project }: ProjectPageProps) => {
     return (
         <>
             <Head>
-                <title>{`${project?.title || 'Untitled Project'} | Kael`}</title>
+                <title>{`${project?.title || 'Untitled Project'} | Vladyslav`}</title>
             </Head>
             {/*========= Header ==========*/}
             <header className={styles.ProjectSinglePage}>

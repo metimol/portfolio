@@ -8,7 +8,7 @@ export default function ProjectPage() {
     return (
         <>
             <Head>
-                <title>Kael | Projects</title>
+                <title>Vladyslav | Projects</title>
             </Head>
             <ProjectHeroSection />
             <ProjectsSection />

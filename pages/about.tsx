@@ -9,7 +9,7 @@ export default function AboutPage() {
     return (
         <>
             <Head>
-                <title>Kael | About</title>
+                <title>Vladyslav | About</title>
             </Head>
             <AboutHeroSection />
             <AboutDetailsSection />

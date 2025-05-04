@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
                 <div className={styles.wrapper}>
                     <div className={styles.col}>
                         {contactInfo}
-                        <Link href='mailto:mrzaidsaeed@gmail.com'>hello@kaeldonovan.com</Link>
+                        <Link href='mailto:metimol2005@gmail.com'>metimol2005@gmail.com</Link>
                     </div>
                     <div className={styles.linksCol}>
                         {navigationLinks}
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <h2 className={styles.bigText}>Kael Donovan</h2>
+            <h2 className={styles.bigText}>Vladyslav Horobtsov</h2>
         </footer>
     );
 };
