@@ -72,7 +72,7 @@ export default function AboutSection() {
                     <Tag text="About" />
                 </div>
                 <h2 className={styles.aboutText} ref={aboutTextRef}>
-                    I am a backend developer with 3 years of experience, specializing in web development and data scraping. My expertise enables me to build efficient and scalable solutions for complex challenges.
+                    I'm a Python backend developer with expertise in AI model integration and deployment. I specialize in creating efficient, scalable solutions that leverage machine learning capabilities for real-world applications.
                 </h2>
                 <div className={styles.btnSpace} ref={btnWrapperRef}>
                     <Button text="More About Me" href="/about" />

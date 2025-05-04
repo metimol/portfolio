@@ -16,24 +16,24 @@ interface Service {
 // Define the services data
 const services: Service[] = [
     {
-        title: "Strategy",
+        title: "Python Development",
         numbering: "01",
-        listItems: ["Discovery", "Research", "Analysis", "Consultation", "Optimization"],
+        listItems: ["FastAPI", "Django", "Flask", "Data Processing", "Automation"],
     },
     {
-        title: "Design",
+        title: "AI & ML Integration",
         numbering: "02",
-        listItems: ["Branding", "UI/UX", "Visual Identity", "Graphics", "Illustration"],
+        listItems: ["AI Model Deployment", "API Integration", "Data Pipeline Design", "ML Operations", "Fine-tuning"],
     },
     {
-        title: "Development",
+        title: "Web Scraping",
         numbering: "03",
-        listItems: ["Frontend", "Framer", "API Integration", "Testing", "Deployment"],
+        listItems: ["BeautifulSoup", "Scrapy", "Selenium", "Data Extraction", "Automation"],
     },
     {
-        title: "Production",
+        title: "Backend Systems",
         numbering: "04",
-        listItems: ["3D modeling", "VR Experiences", "Visualization", "Motion Graphics", "Animations"],
+        listItems: ["API Design", "Database Architecture", "Authentication", "Performance Optimization", "Scalable Solutions"],
     },
 ];
 
@@ -157,7 +157,7 @@ export default function ServiceSection() {
                 </div>
                 <div className={styles.headingWrapper}>
                     <h1 ref={headingRef}>
-                        {splitText("Tailored Solutions for Your Unique Vision")}
+                        {splitText("Robust Backend Solutions for Modern Applications")}
                     </h1>
                     <div ref={btnWrapperRef}>
                         <Button text="Get in touch" href="/contact" />

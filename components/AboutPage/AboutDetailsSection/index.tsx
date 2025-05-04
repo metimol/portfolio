@@ -21,17 +21,21 @@ const animateText = (ref: React.RefObject<HTMLElement>, startOffset: string = '7
 };
 
 // Prepare data for rendering
-const tools = ['photoshop', 'illustrator', 'figma', 'after effects', 'HTML', 'CSS', 'SCSS', 'Tailwind', 'JS', 'React', 'NextJS', 'ThreeJS', 'Framer', 'spline', 'blender'];
+const tools = [
+    'Python', 'FastAPI', 'Django', 'Flask', 'C++', 
+    'Go', 'Java', 'MySQL', 'SQLite', 'Redis', 
+    'Docker', 'AI/ML', 'HTML/CSS', 'JavaScript', 'Git'
+];
 const experiences = [
     {
-        position: "Web Developer / Motion Designer",
-        company: "at Digiverse Studio",
-        period: "sep 2018 - present"
+        position: "Backend Developer",
+        company: "BlackWave Studio",
+        period: "Dec 2024 - present"
     },
     {
-        position: "UIUX Designer / Web Developer",
-        company: "at Innvoise Agency",
-        period: "jan 2016 - aug 2018"
+        position: "Full-Stack Developer",
+        company: "Freelance",
+        period: "Sep 2022 - Dec 2024"
     }
 ];
 
@@ -89,13 +93,13 @@ export default function AboutDetailsSection() {
     return (
         <section className={styles.aboutDetails}>
             <h2 ref={headingRef}>
-                {splitText("I focus on understanding your goals to create a visually stunning, user-friendly website that performs flawlessly. Combining creative design and cutting-edge technology, I deliver results that make an impact from day one.")}
+                {splitText("I specialize in building scalable backend systems in Python, focusing on AI model deployment, efficient data processing pipelines, and robust APIs. With expertise in frameworks like FastAPI, Django, and Flask, I create high-performance applications that leverage cutting-edge AI capabilities while maintaining security, reliability and scalability.")}
             </h2>
 
             {/* Toolbox */}
             <div className={styles.Toolbox}>
                 <div className={styles.tagline} ref={taglineRef}>
-                    <Tag text="Tools" />
+                    <Tag text="Skills & Tools" />
                 </div>
                 <div className={styles.wrapper} ref={toolRef}>
                     {tools.map((tool, idx) => (

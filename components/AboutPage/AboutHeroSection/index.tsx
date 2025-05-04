@@ -60,10 +60,10 @@ export default function AboutHeroSection() {
             <div className={styles.wrapper}>
                 <div className={styles.text}>
                     <h2 ref={headingRef}>
-                        {splitText("Over 8 years of experience, continuously pushing the boundaries of design and development.")}
+                        {splitText("Over 3 years of experience building robust backend systems, APIs, and web scraping solutions.")}
                     </h2>
                     <h2 ref={heading2Ref}>
-                        {splitText("Enthusiastic about crafting seamless experiences that combine ideas, visuals, design, and development.")}
+                        {splitText("Passionate about creating efficient, scalable architectures that power modern applications and handle complex data processing tasks.")}
                     </h2>
                 </div>
 

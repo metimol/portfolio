@@ -43,7 +43,7 @@ export default function HeroSection() {
                 </div>
             </div>
             <h5 className={styles.tagline}>
-                an independent backend developer based in Ukraine
+                Python backend developer specializing in AI solutions
             </h5>
         </section>
     );

@@ -51,16 +51,16 @@ export default function BookCallSection() {
             <section className={styles.BookCall}>
                 <div className={styles.container}>
                     <div ref={taglineRef}>
-                        <Tag text="Book a call" />
+                        <Tag text="Contact" />
                     </div>
                     <h2 ref={headingRef}>
-                        {splitText("Ready to Transform Your Vision?")}
+                        {splitText("Let's Discuss Your Next Project")}
                     </h2>
                     <p ref={paragraphRef}>
-                        {splitText("Let's discuss how we can bring your ideas to life. Book a quick call with our team, and we'll guide you through the next steps.")}
+                        {splitText("Have a question or ready to start working together? Reach out to me directly via Telegram for a quick response.")}
                     </p>
                     <div className={styles.btnSpace} ref={btnWrapperRef}>
-                        <Button text="Book a call" href="https://calendly.com/" targetBlank={true} />
+                        <Button text="Message on Telegram" href="https://t.me/metimol" targetBlank={true} />
                     </div>
                 </div>
             </section>
