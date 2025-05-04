@@ -3,6 +3,7 @@ import styles from './AboutHeroSection.module.scss';
 import { splitText } from '@/utils/textUtils';
 import { useRef, useEffect } from 'react';
 import { gsap } from '@/libs/gsap';
+import { getAssetPath } from '@/utils/assetPath';
 
 export default function AboutHeroSection() {
     const bannerHeadingRef = useRef<HTMLDivElement | null>(null);
@@ -67,7 +68,7 @@ export default function AboutHeroSection() {
                 </div>
 
                 <div className={styles.image} ref={imageRef}>
-                    <Image src='/images/about.jpeg' alt='Kael Donovan' width={500} height={500} unoptimized />
+                    <Image src={getAssetPath('images/about.jpeg')} alt='Kael Donovan' width={500} height={500} unoptimized />
                 </div>
             </div>
         </section>

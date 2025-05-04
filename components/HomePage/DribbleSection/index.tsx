@@ -1,10 +1,13 @@
-import { useEffect, useRef } from 'react';
-import Image from 'next/image';
-import { gsap } from '@/libs/gsap';
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 import styles from './DribbleSection.module.scss';
-import Tag from '@/components/Tag';
 import Button from '@/components/Button';
+import Image from 'next/image';
+import { getAssetPath } from '@/utils/assetPath';
 import { splitText } from '@/utils/textUtils';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const animations = [
     { left: { x: -800, rotation: -30, y: 100 }, right: { x: 800, rotation: 30, y: 100 } },
@@ -79,7 +82,7 @@ export default function DribbleSection() {
                 <div ref={taglineRef}>
                     <Tag text='Follow on' />
                 </div>
-                <Image src='/images/dribble.webp' alt='dribble' width={100} height={50} ref={imageRef} />
+                <Image src={getAssetPath('images/dribble.webp')} alt='dribble' width={100} height={50} ref={imageRef} />
                 <h5 ref={headingRef}>
                     {splitText("Energizing the digital landscape, our creativity shines in bespoke websites.")}
                 </h5>
@@ -100,8 +103,8 @@ export default function DribbleSection() {
                         }}
                         key={index}
                     >
-                        <Image src={`/images/dribble${index * 2 + 1}.jpeg`} width={500} height={500} alt='dribble' unoptimized />
-                        <Image src={`/images/dribble${index * 2 + 2}.jpeg`} width={500} height={500} alt='dribble' unoptimized />
+                        <Image src={getAssetPath(`images/dribble${index * 2 + 1}.jpeg`)} width={500} height={500} alt='dribble' unoptimized />
+                        <Image src={getAssetPath(`images/dribble${index * 2 + 2}.jpeg`)} width={500} height={500} alt='dribble' unoptimized />
                     </div>
                 ))}
             </div>

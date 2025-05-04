@@ -3,12 +3,13 @@ import { useEffect, useRef } from 'react';
 import { gsap, ScrollTrigger } from '@/libs/gsap';
 import styles from './AwardSection.module.scss';
 import { splitText } from '@/utils/textUtils';
+import { getAssetPath } from '@/utils/assetPath';
 
 const awardImages = [
-    ['/images/awwards.webp', '/images/awwards.webp'],
-    ['/images/awwards.webp', '/images/awwards.webp'],
-    ['/images/awwards.webp', '/images/awwards.webp'],
-    ['/images/awwards.webp', '/images/awwards.webp'],
+    [getAssetPath('images/awwards.webp'), getAssetPath('images/awwards.webp')],
+    [getAssetPath('images/awwards.webp'), getAssetPath('images/awwards.webp')],
+    [getAssetPath('images/awwards.webp'), getAssetPath('images/awwards.webp')],
+    [getAssetPath('images/awwards.webp'), getAssetPath('images/awwards.webp')],
 ];
 
 export default function AwardSection() {
@@ -62,9 +63,9 @@ export default function AwardSection() {
                     <h2 ref={headingRef}>
                         {splitText("I have already a variety of awards won")}
                     </h2>
-                    <div className={styles.logos} ref={logosRef}>
-                        <Image src='/images/awwardsLogo.svg' alt='awwards' width={100} height={50} />
-                        <Image src='/images/cssdLogo.svg' alt='cssd' width={100} height={50} />
+                    <div className={styles.logos}>
+                        <Image src={getAssetPath('images/awwardsLogo.svg')} alt='awwards' width={100} height={50} />
+                        <Image src={getAssetPath('images/cssdLogo.svg')} alt='cssd' width={100} height={50} />
                     </div>
                 </div>
                 <div className={styles.border}></div>

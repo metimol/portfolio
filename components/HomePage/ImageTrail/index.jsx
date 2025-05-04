@@ -1,5 +1,6 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from 'react';
 import styles from './ImageTrail.module.scss';
+import { getAssetPath } from '@/utils/assetPath';
 
 const lerp = (a, b, n) => (1 - n) * a + n * b;
 const map = (x, a, b, c, d) => ((x - a) * (d - c)) / (b - a) + c;
@@ -64,7 +65,11 @@ export default function ImageTrail() {
     return (
         <>
             <div className={styles.content}>
-                <div ref={trailRef} className={styles.trail} style={{ backgroundImage: 'url(/images/heroimg2.jpeg)' }} />
+                <div 
+                    ref={trailRef} 
+                    className={styles.trail} 
+                    style={{ backgroundImage: `url(${getAssetPath('images/heroimg2.jpeg')})` }} 
+                />
             </div>
         </>
     );

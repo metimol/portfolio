@@ -4,14 +4,16 @@ import SmoothScrolling from "@/components/SmoothScrolling";
 import "@/styles/globals.scss";  // Ensure this is your global SCSS import
 import type { AppProps } from "next/app";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Loader from "@/components/Loader";
+import { getAssetPath } from "@/utils/assetPath";
 
 export default function App({ Component, pageProps }: AppProps) {
     const router = useRouter();
     const scrollPositions = useRef<{ [key: string]: number }>({});
+    const [isLoading, setIsLoading] = useState<boolean>(true);
 
     // Scroll position management
     useEffect(() => {
@@ -33,22 +35,29 @@ export default function App({ Component, pageProps }: AppProps) {
         };
     }, [router.events]);
 
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false);
+
+            const timeout = setTimeout(() => {
+                document.body.style.cursor = 'default';
+                window.scrollTo(0, 0);
+            }, 1000);
+
+            return () => clearTimeout(timeout);
+        }, 2000);
+    }, []);
+
     return (
         <>
             <Head>
-                <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
-                <meta
-                    name="description"
-                    content="Experienced web developer and designer specializing in creating modern, responsive websites with clean, efficient code and stunning visuals. Let's build something amazing together."
-                />
-                <meta name="author" content="Zaid khan" />
-                <meta property="og:title" content="Kael Donovan | Web Developer & Designer Portfolio" />
-                <meta
-                    property="og:description"
-                    content="Discover my web development and design portfolio. I craft beautiful, responsive websites that bring ideas to life."
-                />
-                <meta property="og:url" content="https://kael-donovan.vercel.app/" />
-                <meta property="og:type" content="website" />
+                <title>Kael — Crafting digital products with a focus on UI design and development</title>
+                <meta name="description" content="Focused on crafting memorable digital experiences through ui design and creative development." />
+                <meta name="author" content="Kael" />
+                <meta name="robots" content="index, follow" />
+                <meta name="keywords" content="UI Design, Web Developer, Digital Products, Creative Developer" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="icon" type="image/x-icon" href={getAssetPath('images/favicon.png')} />
             </Head>
 
             <Loader />
@@ -74,17 +83,21 @@ export default function App({ Component, pageProps }: AppProps) {
                     />
 
                     <SmoothScrolling>
-                        <Nav />
-                        <motion.main
-                            key="main-content"
-                            initial={{ opacity: 1 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}  // Fade out the main content on exit
-                            transition={{ duration: 0, ease: [0.22, 1, 0.36, 1] }}
-                        >
-                            <Component {...pageProps} />
-                        </motion.main>
-                        <Footer />
+                        {isLoading ? <Loader /> : (
+                            <>
+                                <Nav />
+                                <motion.main
+                                    key="main-content"
+                                    initial={{ opacity: 1 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}  // Fade out the main content on exit
+                                    transition={{ duration: 0, ease: [0.22, 1, 0.36, 1] }}
+                                >
+                                    <Component {...pageProps} />
+                                </motion.main>
+                                <Footer />
+                            </>
+                        )}
                     </SmoothScrolling>
                 </motion.div>
             </AnimatePresence>

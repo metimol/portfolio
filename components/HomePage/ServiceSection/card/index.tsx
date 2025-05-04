@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 import Image from 'next/image';
+import { getAssetPath } from '@/utils/assetPath';
 import styles from './card.module.scss';
 
 interface ServiceCardProps {
@@ -15,12 +16,14 @@ const ServiceCard = forwardRef<HTMLDivElement, ServiceCardProps>(
                 <div className={styles.cardWrapper}>
                     <div className={styles.flipCardInner}>
                         <div className={`${styles.flipCardFront} flipCardFrontA`}>
-                            <Image
-                                src="/images/serviceCard.png"
-                                width={500}
-                                height={500}
-                                alt='card'
-                            />
+                            <div className={styles.serviceImage}>
+                                <Image
+                                    src={getAssetPath("images/serviceCard.png")}
+                                    alt="service"
+                                    width={300}
+                                    height={300}
+                                />
+                            </div>
                         </div>
                         {/* Card details */}
                         <div className={`${styles.flipCardBack} flipCardBackB`}>
