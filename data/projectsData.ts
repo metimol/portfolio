@@ -6,7 +6,7 @@ export const projects = [
     title: "BlackWave Studio",
     slug: "blackwave-studio",
     category: ["Backend Development", "AI", "API Design"],
-    img: getAssetPath("images/project1_1.jpg"),
+    img: getAssetPath("images/project1_1.png"),
 
     // Sticky
     owner: "Vladyslav Horobtsov",
