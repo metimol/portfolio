@@ -7,6 +7,23 @@ $textGrey: #787878;
 $navigationColor: #2d2d2d59;
 $borderColor: rgb(37, 37, 37);
 
+// Colors
+$backgroundColor: #130c15;
+$accentColor: #4b5563;
+$secondaryColor: #2d3748;
+$lightColor: #ffffff;
+$navigationColor: rgba(19, 12, 21, 0.8);
+
+// Base path for assets (will be '/portfolio' in production and '/' in development)
+:root {
+  --base-path: "";
+}
+
+// CSS Variables
+@function asset-url($path) {
+  @return url(var(--base-path) + $path);
+}
+
 @mixin section {
     position: relative;
     padding-left: 2rem;

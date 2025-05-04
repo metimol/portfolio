@@ -2,7 +2,7 @@
 
 .about {
     @include paddingArround;
-    background: url(/images/overlay.webp);
+    background: asset-url('/images/overlay.webp');
     object-fit: cover;
     background-position: center;
     background-size: cover;

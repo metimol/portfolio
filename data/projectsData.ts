@@ -1,10 +1,12 @@
+import { getAssetPath } from "@/utils/assetPath";
+
 export const projects = [
   {
     // For Post
     title: "Electric Car",
     slug: "electric-car",
     category: ["UIUX Design", "Branding"],
-    img: "/images/project1_1.jpeg",
+    img: getAssetPath("images/project1_1.jpeg"),
 
     // Sticky
     owner: "Krystyna Pyatashova",
@@ -29,7 +31,7 @@ export const projects = [
     title: "Immersive VR",
     slug: "immersive-vr",
     category: ["Product", "Branding"],
-    img: "/images/project2_1.jpeg",
+    img: getAssetPath("images/project2_1.jpeg"),
 
     // Sticky
     owner: "Tim Davic",
@@ -54,7 +56,7 @@ export const projects = [
     title: "VaultX",
     slug: "vaultx",
     category: ["UIUX", "Framer Development"],
-    img: "/images/project3_1.png",
+    img: getAssetPath("images/project3_1.png"),
 
     // Sticky
     owner: "Zaid Khan",
@@ -79,7 +81,7 @@ export const projects = [
     title: "Glidex",
     slug: "glidex",
     category: ["UIUX", "Framer Development"],
-    img: "/images/project4_1.png",
+    img: getAssetPath("images/project4_1.png"),
 
     // Sticky
     owner: "Zaid Khan",
@@ -104,7 +106,7 @@ export const projects = [
     title: "Radiant Blooms",
     slug: "radiant-blooms",
     category: ["Artwork", "Illustration"],
-    img: "/images/project5_1.jpeg",
+    img: getAssetPath("images/project5_1.jpeg"),
 
     // Sticky
     owner: "Kevin Powell",

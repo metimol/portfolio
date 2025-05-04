@@ -1,5 +1,22 @@
 @import "@/styles/variables.scss";
 
+/* Font imports */
+@font-face {
+    font-family: 'PPNeueMontreal';
+    src: asset-url('/fonts/PPNeueMontreal-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PPNeueMontreal';
+    src: asset-url('/fonts/PPNeueMontreal-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -131,19 +148,6 @@ ul {
     transform-origin: top; // Transition starts from the top for sliding out
     z-index: 1000;
     pointer-events: none; // Prevent interaction during the animation
-}
-
-/*=============== Fonts ===============*/
-$fonts: (
-    PPmedium: "PPNeueMontreal-Medium",
-    PPregular: "PPNeueMontreal-Regular"
-);
-
-@each $name, $file in $fonts {
-    @font-face {
-        font-family: $name;
-        src: url("/fonts/#{$file}.woff2");
-    }
 }
 
 /*===== Image Trail of Hero Section =====*/
