@@ -33,7 +33,7 @@ Welcome to my professional portfolio website built with Next.js! This project sh
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/portfolio.git
+   git clone https://github.com/metimol/portfolio.git
    cd portfolio
    ```
 
