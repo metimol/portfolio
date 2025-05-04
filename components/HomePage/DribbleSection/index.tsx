@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import styles from './DribbleSection.module.scss';
 import Button from '@/components/Button';
+import Tag from '@/components/Tag';
 import Image from 'next/image';
 import { getAssetPath } from '@/utils/assetPath';
 import { splitText } from '@/utils/textUtils';
