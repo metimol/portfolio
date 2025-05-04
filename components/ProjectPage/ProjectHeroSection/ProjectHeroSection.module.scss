@@ -1,0 +1,19 @@
+@import "@/styles/variables.scss";
+
+.projectHero {
+    overflow: hidden;
+    margin-top: 4rem;
+
+    /* Big  heading */
+    h1 {
+        font-size: 20.3vw;
+        letter-spacing: -.6vw;
+        font-weight: lighter;
+        line-height: 0.8;
+        text-transform: uppercase;
+
+        span {
+            @include gradientText;
+        }
+    }
+}

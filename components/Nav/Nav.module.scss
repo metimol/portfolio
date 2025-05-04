@@ -1,0 +1,112 @@
+@import "@/styles/variables.scss";
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.4rem 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    z-index: 20;
+    mix-blend-mode: difference;
+
+
+    .link,
+    .logo {
+        @include font-1;
+        font-family: PPmedium;
+        transition: color $transition;
+
+        &:hover {
+            color: $primary;
+        }
+
+        @media (max-width: 600px) {
+            display: none;
+        }
+    }
+
+    .menu_Toggle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.7rem;
+        cursor: pointer;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .bar {
+            width: 140px;
+            height: 5px;
+            border-radius: 100px;
+            background: $white;
+            transition: width $transition;
+        }
+
+        span {
+            font-size: 0.6rem;
+            letter-spacing: 0.07rem;
+        }
+
+        &:hover {
+            .bar {
+                width: 160px;
+            }
+        }
+    }
+}
+
+/* Navigation Menu */
+.navigationMenu {
+    position: fixed;
+    z-index: 10;
+    width: calc(100% - 20px);
+    top: 10px;
+    left: 10px;
+    border-radius: 8px;
+    background: $navigationColor;
+    backdrop-filter: blur(50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 9rem 0 3rem 0;
+    clip-path: inset(0% 0% 100% 0%);
+    visibility: hidden;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+
+        li {
+            overflow: hidden;
+
+            a {
+                @include font-2_75;
+                text-transform: uppercase;
+                line-height: 0.9;
+                display: block;
+                opacity: 1; // Default opacity
+                transition: opacity $transition;
+            }
+
+            &:hover a {
+                opacity: 1; // Hovered link opacity
+            }
+        }
+    }
+
+    // Apply hover effect to other links
+    ul:hover li a {
+        opacity: 0.3; // Non-hovered links opacity
+    }
+
+    ul li:hover a {
+        opacity: 1; // Hovered link opacity
+    }
+}

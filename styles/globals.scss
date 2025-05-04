@@ -1,0 +1,205 @@
+@import "@/styles/variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: PPregular;
+    overflow-x: clip;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    font-display: swap;
+    overscroll-behavior: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: $black;
+    color: $white;
+    backface-visibility: hidden;
+    touch-action: manipulation;
+    transition: none !important;
+}
+
+body.loading-styles {
+    opacity: 0;  // You can use this to hide content briefly during transition.
+    transition: opacity 0.3s ease-in-out;
+  }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $primary;
+}
+
+::selection {
+    color: $black;
+    background-color: $primary;
+}
+
+/*=============== Lenis ===============*/
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
+}
+
+/*==============================*/
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    padding-bottom: 10rem;
+    overflow-x: clip;
+
+    @media (max-width: 840px) {
+        gap: 8rem;
+        padding-bottom: 8rem;
+    }
+
+    @media (max-width: 600px) {
+        gap: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+section {
+    width: 100%;
+    overflow-x: clip;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+/*=============== Framer Motion Page transition ===============*/
+.slide-in {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top, $primary, #fa7300);
+    transform-origin: bottom; // Transition starts from the bottom for sliding in
+    z-index: 1000;
+    pointer-events: none; // Prevent interaction during the animation
+}
+
+.slide-out {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top, $primary, #fa7300);
+    transform-origin: top; // Transition starts from the top for sliding out
+    z-index: 1000;
+    pointer-events: none; // Prevent interaction during the animation
+}
+
+/*=============== Fonts ===============*/
+$fonts: (
+    PPmedium: "PPNeueMontreal-Medium",
+    PPregular: "PPNeueMontreal-Regular"
+);
+
+@each $name, $file in $fonts {
+    @font-face {
+        font-family: $name;
+        src: url("/fonts/#{$file}.woff2");
+    }
+}
+
+/*===== Image Trail of Hero Section =====*/
+.trail__img {
+    width: 25vw;
+    object-fit: cover;
+    position: relative;
+    will-change: transform;
+    grid-area: 1 / 1 / 2 / 2;
+    border-radius: 12px;
+
+    @media (max-width: 1080px) {
+        width: 30vw;
+    }
+
+    @media (max-width: 840px) {
+        width: 60vw;
+    }
+
+    @media (max-width: 600px) {
+        width: 80vw;
+    }
+}
+
+/*====== Loading Intro Animation ======*/
+.intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, $primary, #fa7300);
+    color: $black;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 5000000;
+
+    .counter {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+
+        span {
+            font-size: 40vw;
+            letter-spacing: -3vw;
+            line-height: 0.7;
+            display: block;
+            font-weight: lighter;
+            @media (max-width: 600px) {
+                font-size: 60vw;
+            }
+        }
+    }
+
+    &.hidden {
+        display: none;
+    }
+}

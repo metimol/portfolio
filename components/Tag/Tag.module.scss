@@ -1,0 +1,11 @@
+@import "@/styles/variables.scss";
+
+.tag {
+    span {
+        @include font0_7;
+        color: $primary;
+        font-weight: bolder;
+        line-height: 1.8;
+        letter-spacing: 0.4rem;
+    }
+}

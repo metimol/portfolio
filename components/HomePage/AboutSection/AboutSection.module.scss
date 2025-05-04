@@ -1,0 +1,56 @@
+@import "@/styles/variables.scss";
+
+.about {
+    @include paddingArround;
+    background: url(/images/overlay.webp);
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    height: fit-content;
+
+    @media (max-width: 840px) {
+        height: auto;
+        min-height: auto;
+    }
+
+    .container {
+        @include paddingArround;
+        width: 100%;
+        height: fit-content;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: $navigationColor;
+        backdrop-filter: blur(50px);
+        border-radius: 10px;
+        overflow: hidden;
+
+        @media (max-width: 840px) {
+            height: auto;
+            min-height: auto;
+            padding: 6rem 2rem;
+        }
+
+        @media (max-width: 600px) {
+            height: auto;
+            min-height: auto;
+            padding: 4rem 1rem;
+        }
+
+        .aboutText {
+            @include font-2_75;
+            @include mT2;
+            max-width: 68rem;
+            width: 100%;
+            line-height: 1.1;
+        }
+
+        .btnSpace {
+            @include mT3;
+        }
+    }
+}

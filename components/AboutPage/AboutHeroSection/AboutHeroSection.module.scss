@@ -1,0 +1,57 @@
+@import "@/styles/variables.scss";
+
+.aboutHero {
+    overflow: hidden;
+    margin-top: 4rem;
+
+    /* Big  heading */
+    h1 {
+        font-size: 31vw;
+        letter-spacing: -1vw;
+        font-weight: lighter;
+        line-height: 0.8;
+        text-transform: uppercase;
+
+        span {
+            @include gradientText;
+        }
+    }
+
+    /* Wrapper */
+    .wrapper {
+        @include section;
+        @include mT3;
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+
+        .text {
+            flex: 1;
+
+            h2 {
+                @include font-2_75;
+
+                &:nth-child(2) {
+                    color: $textGrey;
+                    @include mT2;
+                }
+            }
+        }
+
+        .image {
+            flex: 1;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            flex-direction: column-reverse;
+        }
+    }
+}

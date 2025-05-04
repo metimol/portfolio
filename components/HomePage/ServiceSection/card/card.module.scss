@@ -1,0 +1,107 @@
+@import '@/styles/variables.scss';
+
+// This card for desktop device only
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22vw;
+    height: 65vh;
+    perspective: 1000px;
+
+    @media (max-width: 1080px) {
+        max-height: 500px;
+    }
+
+    .cardWrapper {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: floating 3s infinite ease-in-out;
+
+        .flipCardInner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+
+            .flipCardFront,
+            .flipCardBack {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                border-radius: 15px;
+                overflow: hidden;
+                transform-style: preserve-3d;
+            }
+
+            .flipCardFront {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            /* Card Content Details */
+            .flipCardBack {
+                padding: 2rem;
+                background: $textDark;
+                transform: rotateY(180deg);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .title {
+                    @include font-1_8;
+                }
+
+                ul {
+                    margin: 1rem 0;
+
+                    li {
+                        @include font-1;
+                        padding: 1rem 0;
+                        border-bottom: 1px dashed rgb(55, 55, 55);
+                    }
+                }
+
+                .numbering {
+                    text-align: right;
+                    @include font-2_75;
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    /* keyframes Aimaion Delay For each cards */
+    &:nth-child(1) {
+        .cardWrapper {
+            animation-delay: 0s;
+        }
+    }
+
+    &:nth-child(2) {
+        .cardWrapper {
+            animation-delay: 0.2s;
+        }
+    }
+
+    &:nth-child(3) {
+        .cardWrapper {
+            animation-delay: 0.4s;
+        }
+    }
+
+    &:nth-child(4) {
+        .cardWrapper {
+            animation-delay: 0.6s;
+        }
+    }
+}

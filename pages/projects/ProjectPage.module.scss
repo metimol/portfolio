@@ -1,0 +1,150 @@
+@import "@/styles/variables.scss";
+
+/* ========== Header ========== */
+.ProjectSinglePage {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .imageWrapper {
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .projectDetails {
+        @include paddingArround;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        h1 {
+            @include font-4_5;
+        }
+
+        .category {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+
+            h5 {
+                @include font0_7;
+                width: fit-content;
+                padding: 0.8rem 1rem;
+                background: #22222242;
+                backdrop-filter: blur(10px);
+                border-radius: 5px;
+                display: inline-block;
+                overflow: hidden;
+            }
+        }
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+    }
+}
+
+/* ========== Header ========== */
+.projectContent {
+    @include section;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 5rem;
+
+    /* Sticjy Project Details */
+    .sticky {
+        position: sticky;
+        top: 4rem;
+        flex: 0.7;
+
+        .wrapper {
+            background: linear-gradient(to bottom, $primary, #fa7300);
+            border-radius: 10px;
+            @include paddingArround;
+            margin-bottom: 1rem;
+
+            h2 {
+                @include font-1_8;
+                margin-bottom: 2rem;
+            }
+
+            > div {
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 1rem 0 2rem 0;
+                border-top: 1px solid #ffffff4b;
+
+                h3,
+                h4 {
+                    @include font-1;
+                }
+            }
+        }
+    }
+
+    /* Scroll Project Content */
+    .scroll {
+        flex: 1;
+
+        > div {
+            @include mT3;
+
+            h2 {
+                @include font-2_75;
+            }
+
+            p {
+                @include mT1;
+                font-size: 1.2rem;
+                line-height: 1.6;
+                color: $textGrey;
+            }
+
+            &:first-child {
+                margin: 0;
+            }
+        }
+    }
+
+    @media (max-width: 1080px) {
+        gap: 2rem;
+    }
+
+    @media (max-width: 840px) {
+        flex-direction: column;
+        gap: 5rem;
+
+        .sticky {
+            flex: 1;
+            width: 100%;
+            position: static;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .scroll {
+            > div {
+                p {
+                    font-size: 1rem;
+                    letter-spacing: 0.05rem;
+                }
+            }
+        }
+    }
+}

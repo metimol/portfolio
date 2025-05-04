@@ -1,0 +1,98 @@
+@import '@/styles/variables.scss';
+
+.aboutDetails {
+    @include section;
+
+    h2 {
+        @include font-2_75;
+        max-width: 75rem;
+        width: 100%;
+        color: $textGrey;
+    }
+
+    /* ToolBox */
+    .Toolbox {
+        @include mT4;
+        border-top: 1px solid $borderColor;
+        padding: 4rem 0;
+        display: flex;
+        align-items: flex-start;
+
+        .tagline {
+            flex: .7;
+        }
+
+        .wrapper {
+            flex: 1;
+
+            h3 {
+                @include font-1_8;
+                display: inline-flex;
+                align-items: center;
+
+                &::after {
+                    content: '';
+                    width: .5rem;
+                    height: .5rem;
+                    background: $primary;
+                    margin: 0 1.2rem 0 .6rem;
+                    display: inline-block;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem 0;
+
+            .tagline{
+                flex: 1;
+            }
+        }
+    }
+
+    /* Experience */
+    .Experience {
+        @include mT2;
+        border-top: 1px solid $borderColor;
+        padding: 4rem 0;
+        display: flex;
+        align-items: flex-start;
+
+        .tagline {
+            flex: .7;
+        }
+
+        .wrapper {
+            flex: 1;
+
+            >div {
+                h3 {
+                    @include font-1_8;
+                }
+
+                h4 {
+                    @include font-1;
+                    @include mT1;
+                    color: $textGrey;
+                }
+
+                &:nth-child(2) {
+                    @include mT3;
+                }
+            }
+        }
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem 0;
+
+            .tagline{
+                flex: 1;
+            }
+        }
+    }
+}

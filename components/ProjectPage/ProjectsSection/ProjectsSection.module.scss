@@ -1,0 +1,117 @@
+@import "@/styles/variables.scss";
+
+.ProjectsSection {
+    @include section;
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+
+        .projectCard {
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            height: 70vh;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform $transition;
+            }
+
+            .projectDetails {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                display: flex;
+                gap: 1rem;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                @include paddingArround;
+
+                .title {
+                    overflow: hidden;
+
+                    h3 {
+                        @include font-1_8;
+                        transform: translateY(-100%);
+                        transition: transform $transition;
+                    }
+                }
+
+                .category {
+                    display: flex;
+                    gap: 0.5rem;
+
+                    h5 {
+                        @include font0_7;
+                        width: fit-content;
+                        padding: 0.8rem 1rem;
+                        background: #3030302c;
+                        backdrop-filter: blur(10px);
+                        border-radius: 5px;
+                        display: inline-block;
+                        overflow: hidden;
+                        transform: translateY(-50%);
+                        opacity: 0;
+                        transition: all $transition;
+
+                        &:nth-child(2) {
+                            transition-delay: 0.1s;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+
+                .projectDetails {
+                    .title {
+                        h3 {
+                            transform: translateY(0);
+                        }
+                    }
+
+                    .category {
+                        h5 {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .projectCard {
+                height: 100vh;
+                max-height: 30rem;
+            }
+        }
+
+        @media (max-width: 840px) {
+            .projectCard {
+                max-height: 25rem;
+
+                .projectDetails {
+                    flex-direction: column;
+                    .category {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 600px) {
+            grid-template-columns: 1fr;
+            .projectCard {
+                max-height: 20rem;
+            }
+        }
+    }
+}

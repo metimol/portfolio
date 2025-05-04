@@ -1,0 +1,47 @@
+@import "@/styles/variables.scss";
+
+/* Contact page header */
+.contact {
+    overflow: hidden;
+    margin-top: 4rem;
+
+    /* Big  heading */
+    h1 {
+        font-size: 21.6vw;
+        letter-spacing: -0.8vw;
+        font-weight: lighter;
+        line-height: 0.8;
+        text-transform: uppercase;
+
+        span {
+            @include gradientText;
+        }
+    }
+}
+
+/* Links Section */
+.linkSection {
+    @include section;
+
+    p {
+        @include font-1;
+        color: $textGrey;
+    }
+
+    .wrapper {
+        @include mT2;
+        display: flex;
+        flex-direction: column;
+
+        a {
+            width: fit-content;
+            @include font-4_5;
+            transition: all $transition;
+            opacity: 0;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}

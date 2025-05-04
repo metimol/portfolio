@@ -1,0 +1,82 @@
+@import "@/styles/variables.scss";
+
+.services {
+    @include section;
+
+    /* Heading */
+    .heading {
+        border-bottom: 1px solid $borderColor;
+        padding-bottom: 2rem;
+
+        .headingWrapper {
+            @include mT2;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 2rem;
+
+            h1 {
+                @include font-4_5;
+                max-width: 60rem;
+                width: 100%;
+            }
+        }
+    }
+
+    /* Cards wrapper */
+    .wrapper {
+        height: 100vh;
+        position: relative;
+
+        @media (max-width: 840px) {
+            display: none;
+        }
+    }
+
+    /* Mobile Card Wrapper */
+    .mobileWrapper {
+        @include mT4;
+        display: none;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+
+        @media (max-width: 840px) {
+            display: grid;
+        }
+
+        @media (max-width: 600px) {
+            grid-template-columns: 1fr;
+        }
+
+        .card {
+            padding: 2rem;
+            background: $textDark;
+            display: flex;
+            flex-direction: column;
+            border-radius: 15px;
+
+            .title {
+                @include font-1_8;
+            }
+
+            ul {
+                margin: 1rem 0;
+
+                li {
+                    @include font-1;
+                    padding: 1rem 0;
+                    border-bottom: 1px dashed rgb(55, 55, 55);
+                }
+            }
+
+            .numbering {
+                text-align: right;
+                @include font-2_75;
+                color: $primary;
+            }
+        }
+    }
+}
