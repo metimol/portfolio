@@ -6,7 +6,7 @@ export const projects = [
     title: "BlackWave Studio",
     slug: "blackwave-studio",
     category: ["Backend Development", "AI", "API Design"],
-    img: getAssetPath("images/project1_1.png"),
+    img: getAssetPath("images/project1_1.jpg"),
 
     // Sticky
     owner: "Vladyslav Horobtsov",
@@ -35,11 +35,11 @@ export const projects = [
 
     // Sticky
     owner: "Vladyslav Horobtsov",
-    date: "January 2025",
+    date: "February 2025",
     services: "Web Scraping, Backend Development, Frontend Development",
-    duration: "6 months",
+    duration: "2 weeks",
     budget: "Personal Project",
-    live: "Private Access",
+    live: "None",
 
     //Scroll
     overview:
@@ -56,15 +56,15 @@ export const projects = [
     title: "Home Server Infrastructure",
     slug: "home-server",
     category: ["DevOps", "System Administration", "Self-hosting"],
-    img: getAssetPath("images/project3_1.png"),
+    img: getAssetPath("images/project3_1.jpg"),
 
     // Sticky
     owner: "Vladyslav Horobtsov",
-    date: "October 2024",
+    date: "December 2024",
     services: "System Administration, Docker, Network Configuration",
     duration: "Ongoing",
     budget: "Personal Project",
-    live: "Private Network",
+    live: "None",
 
     //Scroll
     overview:

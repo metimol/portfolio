@@ -118,7 +118,9 @@ const ProjectPage = ({ project }: ProjectPageProps) => {
                             <h4>{project.budget}</h4>
                         </div>
                     </div>
-                    <Button text="Launch Project" targetBlank={true} href={project.live} />
+                    {project.live && project.live !== 'None' && (
+                        <Button text="Launch Project" targetBlank={true} href={project.live} />
+                    )}
                 </div>
 
                 {/* Scroll project Content */}
