@@ -1,11 +1,6 @@
 @import "@/styles/variables.scss";
 @import "@/styles/assetPaths.scss";
 
-/* Defining a global variable for the base path */
-:root {
-    --base-path: "";
-}
-
 /* Font imports */
 @font-face {
     font-family: 'PPNeueMontreal';

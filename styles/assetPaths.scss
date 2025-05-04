@@ -1,7 +1,10 @@
 // This file is intended for global functions to work with asset paths
 // It will only be imported into global styles
 
+// Define a base path variable
+$base-path: "" !default;
+
 // CSS function for generating asset paths
 @function asset-url($path) {
-    @return url(var(--base-path) + $path);
+    @return url($base-path + $path);
 }

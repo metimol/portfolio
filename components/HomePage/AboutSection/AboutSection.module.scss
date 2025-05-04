@@ -1,8 +1,9 @@
 @import "@/styles/variables.scss";
+@import "@/styles/assetPaths.scss";
 
 .about {
     @include paddingArround;
-    background-image: url(var(--base-path) + '/images/overlay.webp');
+    background-image: asset-url('/images/overlay.webp');
     object-fit: cover;
     background-position: center;
     background-size: cover;
