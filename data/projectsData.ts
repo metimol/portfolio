@@ -2,78 +2,103 @@ import { getAssetPath } from "@/utils/assetPath";
 
 export const projects = [
   {
-    // For Post
-    title: "BlackWave Studio",
-    slug: "blackwave-studio",
-    category: ["Backend Development", "AI", "API Design"],
+    title: "NeuroIMG – AI Image Generation Platform",
+    slug: "neuroimg-ai-image-generation",
+    category: ["Backend Development", "AI", "Infrastructure"],
     img: getAssetPath("images/project1_1.png"),
-
-    // Sticky
     owner: "Vladyslav Horobtsov",
-    date: "March 2025",
-    services: "Backend Development, API Design, AI Integration",
-    duration: "4 months",
+    date: "2025",
+    services: "Backend, AI Integration, Infrastructure",
+    duration: "6 months",
     budget: "Confidential",
-    live: "https://blackwave.studio/",
-
-    // Scroll
+    live: "https://neuroimg.art",
     overview:
-      "BlackWave is a cutting-edge AI image generation platform I developed that provides advanced image creation capabilities through both a user-friendly web interface and a robust API. The platform enables users to generate images from text prompts using multiple AI models (including Stable Diffusion variants, SDXL, Flux, Kolors, and more), apply LoRA models for style customization, upscale images with various algorithms, and share creations through an integrated gallery system.",
+      "Developed the backend for a cutting-edge AI-powered image generation service. Integrated OpenAI, TensorArt, and other AI solutions for text-to-image generation. Optimized request handling to ensure cost-effective AI model execution. Built full infrastructure for model routing, queuing, and monitoring.",
     objective:
-      "The primary objective was to build a scalable and reliable backend system that could handle high-volume image generation requests, integrate seamlessly with multiple AI models, implement a secure token-based economy, and provide a performant API for both the web interface and external integrations. The platform needed to support streaming responses, complex parameter configurations, and comprehensive security measures while maintaining high availability.",
+      "To deliver a scalable, cost-effective, and robust AI image generation backend supporting multiple providers and models, with advanced monitoring and routing capabilities.",
     process:
-      "I implemented a comprehensive backend architecture using Python and FastAPI, with an asynchronous database system for data storage and Redis for caching and rate limiting. The system integrates with multiple AI generation models through a unified service layer, enabling seamless switching between models like SD 1.5/2.0/3.0, SDXL, Flux, Kolors, and many others. I designed the API with performance in mind, implementing efficient request handling with streaming responses, rate limiting middleware, and comprehensive error handling. The authentication system uses JWT tokens with configurable expiration, and the platform includes a Gumroad payment integration for handling token purchases. For image storage, I integrated MinIO (S3-compatible storage) with imgproxy for secure image serving. The system also features a sophisticated NSFW content filter, background task processing, and notification systems for monitoring errors and important events.",
+      "Designed a modular backend in Python (FastAPI), implemented async request handling, integrated OpenAI/TensorArt APIs, and built a monitoring/queuing system for efficient resource use.",
     impact:
-      "BlackWave Studio has successfully processed over 1.5 million image generations while maintaining exceptional reliability with 99.9% uptime. The platform's token-based economy has created a sustainable business model, with multiple token package options providing flexible pricing for users. The API's streaming capabilities have been particularly well-received, allowing for real-time progress updates during the generation process. The gallery system has fostered a creative community around the platform, while the robust backend architecture has easily scaled to meet growing demand. This project showcases my ability to build complex, high-performance backend systems that integrate multiple AI technologies and handle media processing at scale."
+      "Enabled rapid, reliable AI image generation for thousands of users, reducing costs and improving model flexibility for the platform.",
   },
   {
-    // For Post
-    title: "Media Streaming Platform",
-    slug: "media-streaming",
-    category: ["Web Scraping", "Backend", "Frontend"],
-    img: getAssetPath("images/project2_1.jpeg"),
-
-    // Sticky
+    title: "Neurogen Telegram Bot",
+    slug: "neurogen-telegram-bot",
+    category: ["Bot Development", "AI Integration", "Python"],
+    img: getAssetPath("images/serviceCard.png"),
     owner: "Vladyslav Horobtsov",
-    date: "February 2025",
-    services: "Web Scraping, Backend Development, Frontend Development",
-    duration: "2 weeks",
+    date: "2025",
+    services: "Bot Development, AI Integration",
+    duration: "Ongoing",
+    budget: "Personal Project",
+    live: "https://t.me/neurogen_artbot",
+    overview:
+      "Created a Telegram bot using PyTelegramBotAPI and async webhooks. Integrated with NeuroIMG to allow users to generate AI images inside chats. Currently serves over 10,000 users with scalable VPS deployment.",
+    objective:
+      "To provide seamless AI image generation directly in Telegram chats, leveraging NeuroIMG backend.",
+    process:
+      "Developed bot logic in Python, set up async webhooks, integrated with NeuroIMG API, and deployed on scalable VPS infrastructure.",
+    impact:
+      "Over 10,000 users served, with high reliability and fast response times for AI image generation in Telegram.",
+  },
+  {
+    title: "BlackWave – AI-Driven Social Network Simulation",
+    slug: "blackwave-social-simulation",
+    category: ["AI", "Backend", "Simulation"],
+    img: getAssetPath("images/project1_1.png"),
+    owner: "Vladyslav Horobtsov",
+    date: "2025",
+    services: "AI, Backend, Simulation",
+    duration: "4 months",
+    budget: "Open Source",
+    live: "https://github.com/metimol/blackwave",
+    overview:
+      "Developed a social network where one human interacts with thousands of AI users. Combined Django (frontend/API) with FastAPI (AI bots backend). Implemented vector memory search with Qdrant, personality simulation, and real-time interactions. Fully open-source and dockerized for easy deployment.",
+    objective:
+      "To simulate large-scale social interactions between humans and AI agents, exploring emergent behaviors and scalable AI architectures.",
+    process:
+      "Built Django frontend/API, FastAPI backend for AI bots, integrated Qdrant for vector search, and dockerized the entire stack.",
+    impact:
+      "Demonstrated scalable AI social simulation, with open-source code enabling research and experimentation by others.",
+  },
+  {
+    title: "Movie Scraper & Downloader API",
+    slug: "movie-scraper-downloader-api",
+    category: ["Backend", "Web Scraping", "API"],
+    img: getAssetPath("images/project2_1.jpeg"),
+    owner: "Vladyslav Horobtsov",
+    date: "2024",
+    services: "Backend, Web Scraping, API",
+    duration: "1 week",
     budget: "Personal Project",
     live: "None",
-
-    //Scroll
     overview:
-      "I developed a comprehensive media platform for educational purposes that aggregates, processes, and streams movies and TV shows from publicly available sources. The platform features a sophisticated web scraping system that collects metadata and streaming links, processes them for quality and reliability, and presents them through an intuitive user interface.",
+      "Built a FastAPI-based scraper for movie and series metadata. Containerized the app using Docker for scalability. Implemented a lightweight search frontend for easy browsing.",
     objective:
-      "The goal was to create a personal educational tool to practice advanced web scraping techniques, streaming protocol handling, and full-stack development. I aimed to build a system that could autonomously discover content, evaluate streaming quality, and present a Netflix-like user experience while respecting copyright by only accessing publicly available content.",
+      "To automate movie/series metadata collection and provide a simple API and frontend for searching and downloading.",
     process:
-      "I developed a multi-layered scraping system using Node.js, Puppeteer, and custom HTTP clients that can navigate complex websites, bypass anti-bot measures, and extract relevant metadata and streaming URLs. The backend, built with Express and MongoDB, processes and categorizes the data, evaluates stream quality, and manages user preferences and watching history. I implemented real-time stream analysis to determine the best available sources based on resolution, bitrate, and stability. The frontend was developed using React with server-side rendering for optimal performance and SEO, featuring a responsive design that works across devices from mobile to large screens.",
+      "Developed FastAPI backend, Dockerized the app, and built a minimal frontend for search.",
     impact:
-      "This personal project has significantly enhanced my skills in distributed systems, data processing, and both frontend and backend development. It processes thousands of media entries daily, providing reliable access to a vast library of content for educational purposes. The platform has become an excellent showcase of my ability to tackle complex technical challenges and build full-stack solutions with excellent user experience.",
+      "Streamlined media metadata collection and access for personal use and automation.",
   },
   {
-    // For Post
-    title: "Home Server Infrastructure",
-    slug: "home-server",
-    category: ["DevOps", "System Administration", "Self-hosting"],
+    title: "Homelab Media Server Automation",
+    slug: "homelab-media-server-automation",
+    category: ["DevOps", "Automation", "Media"],
     img: getAssetPath("images/project3_1.jpg"),
-
-    // Sticky
     owner: "Vladyslav Horobtsov",
-    date: "December 2024",
-    services: "System Administration, Docker, Network Configuration",
+    date: "2024",
+    services: "DevOps, Automation, Media Server",
     duration: "Ongoing",
     budget: "Personal Project",
     live: "None",
-
-    //Scroll
     overview:
-      "I've designed and implemented a comprehensive home server infrastructure running Ubuntu Server 22.04, serving as a centralized hub for media streaming, file management, remote access, and development testing. The system incorporates multiple containerized services managed through Docker, providing both utility and learning opportunities.",
+      "Configured a Raspberry Pi home media center with Jellyfin, Plex, and Audiobookshelf. Set up secure remote access via Cloudflare Tunnel. Automated service restarts, updates, and remote backups.",
     objective:
-      "The primary objective was to create a reliable and secure home infrastructure that could serve multiple purposes: hosting media content through various streaming services, providing tools for downloading and managing content, offering remote access capabilities, and serving as a testbed for development projects. Additionally, the system needed to be easily maintainable and expandable as new needs arise.",
+      "To automate and secure a home media server setup for reliable, remote access and maintenance.",
     process:
-      "I began by selecting appropriate hardware and installing Ubuntu Server 22.04 as the base operating system. I implemented Docker and Docker Compose to containerize services, allowing for easy deployment, updates, and configuration management. For media services, I deployed Plex, Jellyfin, and Audiobookshelf, each configured with appropriate hardware acceleration and optimized settings. For file management and downloads, I implemented FileBrowser, AriaNg with Aria2, and MeTube (a yt-dlp interface). System monitoring and administration are handled through Dashdot for resource visualization, Webmin for Linux administration, and Portainer for container management. Network security and remote access are managed through Cloudflare Tunnel for secure external access without port forwarding, and Tailscale for a private VPN network based on WireGuard.",
+      "Deployed media servers, configured Cloudflare Tunnel, and scripted automation for updates and backups.",
     impact:
-      "The home server has become an essential part of my personal infrastructure, providing reliable access to media content, simplifying file management across devices, and offering a secure way to access my home network when traveling. It has also served as an excellent learning platform for Linux administration, containerization, and network security. This project demonstrates my ability to design, implement, and maintain complex systems that integrate multiple technologies and services.",
+      "Achieved a robust, self-maintaining home media environment with secure remote access.",
   },
 ];
